@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_global_pricing_entries",
+  "info": {
+    "displayName": "Pricing Entry",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "PriceTitle": {
+      "type": "string",
+      "default": "PriceTitle"
+    },
+    "PriceBody": {
+      "type": "richtext",
+      "default": "Educational play activities, ensuring children learn and develop consistently."
+    },
+    "Thumbnail": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Price": {
+      "type": "decimal",
+      "default": 129.99
+    },
+    "Features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "global.pricing-component"
+    }
+  }
+}

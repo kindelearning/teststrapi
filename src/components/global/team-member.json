@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_global_team_members",
+  "info": {
+    "displayName": "Team Member"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "default": "Name of team member"
+    },
+    "Degree": {
+      "type": "string",
+      "default": "Degree"
+    },
+    "About": {
+      "type": "richtext",
+      "default": "Educational play activities, ensuring children learn and develop consistently."
+    },
+    "MemberPic": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

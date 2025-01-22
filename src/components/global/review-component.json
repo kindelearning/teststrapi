@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_global_review_components",
+  "info": {
+    "displayName": "Review Component"
+  },
+  "options": {},
+  "attributes": {
+    "featuredText": {
+      "type": "string",
+      "default": "feature Text"
+    },
+    "Title": {
+      "type": "string",
+      "default": "Title"
+    },
+    "body": {
+      "type": "richtext",
+      "default": "Educational play activities, ensuring children learn and develop consistently."
+    },
+    "bgcolor": {
+      "type": "string",
+      "default": "#00946c"
+    }
+  }
+}

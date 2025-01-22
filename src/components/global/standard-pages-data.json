@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_global_standard_pages_data",
+  "info": {
+    "displayName": "StandardPagesData"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "default": "Title"
+    },
+    "Body": {
+      "type": "richtext",
+      "default": "Educational play activities, ensuring children learn and develop consistently."
+    },
+    "Lastupdated": {
+      "type": "date",
+      "default": "2025-01-07"
+    },
+    "Pagecontent": {
+      "type": "richtext",
+      "default": "Educational play activities, ensuring children learn and develop consistently."
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_global_toggle_cards",
+  "info": {
+    "displayName": "ToggleCard"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "default": "Toggle Card Title"
+    },
+    "Icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "Body": {
+      "type": "richtext",
+      "default": "Educational play activities, ensuring children learn and develop consistently."
+    },
+    "link": {
+      "type": "string",
+      "default": "#"
+    },
+    "bgcolor": {
+      "type": "string",
+      "default": "d93636"
+    }
+  }
+}

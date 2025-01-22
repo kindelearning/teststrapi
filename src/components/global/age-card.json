@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_global_age_cards",
+  "info": {
+    "displayName": "AgeCard",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "default": "Title"
+    },
+    "Body": {
+      "type": "richtext",
+      "default": "Body"
+    },
+    "Icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

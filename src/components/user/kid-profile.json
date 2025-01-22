@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_user_kid_profiles",
+  "info": {
+    "displayName": "KidProfile"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "default": "Kid Name"
+    },
+    "age": {
+      "type": "integer",
+      "default": 12
+    },
+    "Gender": {
+      "type": "string",
+      "default": "Male"
+    },
+    "AttendingNursury": {
+      "type": "boolean",
+      "default": true
+    },
+    "dob": {
+      "type": "date",
+      "default": "2025-01-13"
+    }
+  }
+}
