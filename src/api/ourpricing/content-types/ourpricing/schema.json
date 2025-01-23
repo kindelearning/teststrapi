@@ -1,0 +1,67 @@
+{
+  "kind": "singleType",
+  "collectionName": "ourpricings",
+  "info": {
+    "singularName": "ourpricing",
+    "pluralName": "ourpricings",
+    "displayName": "Ourpricing",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "SectionTitle": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "default": "SectionTitle"
+    },
+    "SectionBody": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext",
+      "default": "SectionBody"
+    },
+    "MonthlyPlans": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "global.pricing-entry"
+    },
+    "AnnualPlans": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "global.pricing-entry"
+    },
+    "featuredText": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "default": "featuredText"
+    }
+  }
+}

@@ -3,6 +3,7 @@ import type { Schema, Struct } from '@strapi/strapi';
 export interface GlobalAgeCard extends Struct.ComponentSchema {
   collectionName: 'components_global_age_cards';
   info: {
+    description: '';
     displayName: 'AgeCard';
     icon: 'book';
   };
@@ -12,6 +13,7 @@ export interface GlobalAgeCard extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    link: Schema.Attribute.String & Schema.Attribute.DefaultTo<'#'>;
     Title: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Title'>;
   };
 }

@@ -1,0 +1,95 @@
+{
+  "kind": "singleType",
+  "collectionName": "how_it_work_pages",
+  "info": {
+    "singularName": "how-it-work-page",
+    "pluralName": "how-it-work-pages",
+    "displayName": "How It Work Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Hero": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "global.kindi-regular-section"
+    },
+    "AgeGroup": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "global.age-group-section"
+    },
+    "AreaoflearningTitle": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "default": "AreaoflearningTitle"
+    },
+    "ArealearningBody": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text",
+      "default": "ArealearningBody"
+    },
+    "AreaOflearningCards": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "global.toggle-card"
+    },
+    "KindiSkillsCategoriesTitle": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "default": "KindiSkillsCategoriesTitle"
+    },
+    "KindiSkillsCategoriesBody": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "default": "KindiSkillsCategoriesBody"
+    },
+    "KindiSkillsCategoriesCards": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "global.toggle-card"
+    }
+  }
+}
