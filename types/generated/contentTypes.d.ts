@@ -372,6 +372,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiActivityActivity extends Struct.CollectionTypeSchema {
   collectionName: 'activities';
   info: {
+    description: '';
     displayName: 'Activity';
     pluralName: 'activities';
     singularName: 'activity';
@@ -424,6 +425,7 @@ export interface ApiActivityActivity extends Struct.CollectionTypeSchema {
         };
       }> &
       Schema.Attribute.DefaultTo<false>;
+    kid: Schema.Attribute.Relation<'manyToOne', 'api::kid.kid'>;
     LearningArea: Schema.Attribute.Enumeration<
       [
         'Confidence & Independence',
@@ -454,6 +456,14 @@ export interface ApiActivityActivity extends Struct.CollectionTypeSchema {
       'api::activity.activity'
     >;
     publishedAt: Schema.Attribute.DateTime;
+    relatedUsers: Schema.Attribute.Relation<
+      'manyToMany',
+      'plugin::users-permissions.user'
+    >;
+    rescheduled_event: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::rescheduled-event.rescheduled-event'
+    >;
     Resources: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
@@ -507,6 +517,7 @@ export interface ApiActivityActivity extends Struct.CollectionTypeSchema {
 export interface ApiBadgeBadge extends Struct.CollectionTypeSchema {
   collectionName: 'badges';
   info: {
+    description: '';
     displayName: 'Badge';
     pluralName: 'badges';
     singularName: 'badge';
@@ -530,6 +541,7 @@ export interface ApiBadgeBadge extends Struct.CollectionTypeSchema {
         };
       }> &
       Schema.Attribute.DefaultTo<'Educational play activities, ensuring children learn and develop consistently.'>;
+    kid: Schema.Attribute.Relation<'manyToOne', 'api::kid.kid'>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::badge.badge'>;
     Name: Schema.Attribute.String &
@@ -557,6 +569,7 @@ export interface ApiBadgeBadge extends Struct.CollectionTypeSchema {
 export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
   collectionName: 'blogs';
   info: {
+    description: '';
     displayName: 'Blog';
     pluralName: 'blogs';
     singularName: 'blog';
@@ -570,6 +583,7 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    comments: Schema.Attribute.Relation<'oneToMany', 'api::comment.comment'>;
     Content: Schema.Attribute.RichText &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -694,6 +708,7 @@ export interface ApiCommentComment extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    blog: Schema.Attribute.Relation<'manyToOne', 'api::blog.blog'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1267,6 +1282,7 @@ export interface ApiInvestmentoppertuniteInvestmentoppertunite
 export interface ApiKidKid extends Struct.CollectionTypeSchema {
   collectionName: 'kids';
   info: {
+    description: '';
     displayName: 'Kid';
     pluralName: 'kids';
     singularName: 'kid';
@@ -1313,6 +1329,23 @@ export interface ApiKidKid extends Struct.CollectionTypeSchema {
       Schema.Attribute.DefaultTo<'Male'>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::kid.kid'>;
+    myActivities: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::activity.activity'
+    >;
+    myBadges: Schema.Attribute.Relation<'oneToMany', 'api::badge.badge'>;
+    myMilestones: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::milestone.milestone'
+    >;
+    myParent: Schema.Attribute.Relation<
+      'manyToMany',
+      'plugin::users-permissions.user'
+    >;
+    myRescheduledActivities: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::rescheduled-event.rescheduled-event'
+    >;
     Name: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1372,6 +1405,7 @@ export interface ApiLevelLevel extends Struct.CollectionTypeSchema {
 export interface ApiMilestoneMilestone extends Struct.CollectionTypeSchema {
   collectionName: 'milestones';
   info: {
+    description: '';
     displayName: 'Milestone';
     pluralName: 'milestones';
     singularName: 'milestone';
@@ -1402,6 +1436,7 @@ export interface ApiMilestoneMilestone extends Struct.CollectionTypeSchema {
         };
       }> &
       Schema.Attribute.DefaultTo<'Description'>;
+    kid: Schema.Attribute.Relation<'manyToMany', 'api::kid.kid'>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1434,6 +1469,10 @@ export interface ApiMilestoneMilestone extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    users: Schema.Attribute.Relation<
+      'manyToMany',
+      'plugin::users-permissions.user'
+    >;
   };
 }
 
@@ -1672,6 +1711,7 @@ export interface ApiPaymentMethodPaymentMethod
   extends Struct.CollectionTypeSchema {
   collectionName: 'payment_methods';
   info: {
+    description: '';
     displayName: 'Payment Method';
     pluralName: 'payment-methods';
     singularName: 'payment-method';
@@ -1713,6 +1753,10 @@ export interface ApiPaymentMethodPaymentMethod
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::payment-method.payment-method'
+    >;
+    myUsers: Schema.Attribute.Relation<
+      'manyToMany',
+      'plugin::users-permissions.user'
     >;
     Name: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
@@ -2036,6 +2080,7 @@ export interface ApiRescheduledEventRescheduledEvent
   extends Struct.CollectionTypeSchema {
   collectionName: 'rescheduled_events';
   info: {
+    description: '';
     displayName: 'RescheduledEvent';
     pluralName: 'rescheduled-events';
     singularName: 'rescheduled-event';
@@ -2057,6 +2102,8 @@ export interface ApiRescheduledEventRescheduledEvent
       'oneToMany',
       'api::rescheduled-event.rescheduled-event'
     >;
+    myActivity: Schema.Attribute.Relation<'oneToOne', 'api::activity.activity'>;
+    myKid: Schema.Attribute.Relation<'manyToOne', 'api::kid.kid'>;
     newDate: Schema.Attribute.Date &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -2657,6 +2704,14 @@ export interface PluginUsersPermissionsUser
     draftAndPublish: false;
   };
   attributes: {
+    allActivities: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::activity.activity'
+    >;
+    allMilestones: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::milestone.milestone'
+    >;
     blocked: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     confirmationToken: Schema.Attribute.String & Schema.Attribute.Private;
     confirmed: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
@@ -2668,6 +2723,10 @@ export interface PluginUsersPermissionsUser
       Schema.Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
+    iAmPartnerOf: Schema.Attribute.Relation<
+      'manyToMany',
+      'plugin::users-permissions.user'
+    >;
     isPremium: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -2675,6 +2734,15 @@ export interface PluginUsersPermissionsUser
       'plugin::users-permissions.user'
     > &
       Schema.Attribute.Private;
+    myKids: Schema.Attribute.Relation<'manyToMany', 'api::kid.kid'>;
+    myPartner: Schema.Attribute.Relation<
+      'manyToMany',
+      'plugin::users-permissions.user'
+    >;
+    myPaymentMethods: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::payment-method.payment-method'
+    >;
     Name: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Kid Name'>;
     password: Schema.Attribute.Password &
       Schema.Attribute.Private &
@@ -2691,6 +2759,10 @@ export interface PluginUsersPermissionsUser
       'manyToOne',
       'plugin::users-permissions.role'
     >;
+    SubscriptionLevel: Schema.Attribute.Enumeration<
+      ['Family', 'Family Plus', 'Professional']
+    > &
+      Schema.Attribute.DefaultTo<'Family'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

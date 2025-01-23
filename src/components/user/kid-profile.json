@@ -1,7 +1,8 @@
 {
   "collectionName": "components_user_kid_profiles",
   "info": {
-    "displayName": "KidProfile"
+    "displayName": "KidProfile",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -24,6 +25,21 @@
     "dob": {
       "type": "date",
       "default": "2025-01-13"
+    },
+    "activity_completeds": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::kid.kid"
+    },
+    "milestone_completeds": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::milestone.milestone"
+    },
+    "badge_completeds": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::badge.badge"
     }
   }
 }

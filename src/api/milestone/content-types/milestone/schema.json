@@ -4,7 +4,8 @@
   "info": {
     "singularName": "milestone",
     "pluralName": "milestones",
-    "displayName": "Milestone"
+    "displayName": "Milestone",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -25,14 +26,15 @@
       "default": "Title"
     },
     "Thumbnail": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ],
-      "type": "media",
-      "multiple": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -65,6 +67,18 @@
       },
       "type": "richtext",
       "default": "Description"
+    },
+    "kid": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::kid.kid",
+      "inversedBy": "myMilestones"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "allMilestones"
     }
   }
 }

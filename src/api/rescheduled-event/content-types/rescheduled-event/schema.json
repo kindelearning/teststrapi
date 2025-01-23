@@ -4,7 +4,8 @@
   "info": {
     "singularName": "rescheduled-event",
     "pluralName": "rescheduled-events",
-    "displayName": "RescheduledEvent"
+    "displayName": "RescheduledEvent",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -23,6 +24,18 @@
       },
       "type": "date",
       "default": "2025-01-14"
+    },
+    "myKid": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::kid.kid",
+      "inversedBy": "myRescheduledActivities"
+    },
+    "myActivity": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::activity.activity",
+      "inversedBy": "rescheduled_event"
     }
   }
 }

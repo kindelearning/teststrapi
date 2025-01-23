@@ -183,14 +183,24 @@ export interface GlobalToggleCard extends Struct.ComponentSchema {
 export interface UserKidProfile extends Struct.ComponentSchema {
   collectionName: 'components_user_kid_profiles';
   info: {
+    description: '';
     displayName: 'KidProfile';
   };
   attributes: {
+    activity_completeds: Schema.Attribute.Relation<'oneToMany', 'api::kid.kid'>;
     age: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<12>;
     AttendingNursury: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<true>;
+    badge_completeds: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::badge.badge'
+    >;
     dob: Schema.Attribute.Date & Schema.Attribute.DefaultTo<'2025-01-13'>;
     Gender: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Male'>;
+    milestone_completeds: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::milestone.milestone'
+    >;
     Name: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Kid Name'>;
   };
 }

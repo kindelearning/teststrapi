@@ -4,7 +4,8 @@
   "info": {
     "singularName": "badge",
     "pluralName": "badges",
-    "displayName": "Badge"
+    "displayName": "Badge",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -25,14 +26,15 @@
       "default": "Name"
     },
     "Thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -47,6 +49,12 @@
       },
       "type": "richtext",
       "default": "Educational play activities, ensuring children learn and develop consistently."
+    },
+    "kid": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::kid.kid",
+      "inversedBy": "myBadges"
     }
   }
 }

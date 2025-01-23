@@ -4,7 +4,8 @@
   "info": {
     "singularName": "kid",
     "pluralName": "kids",
-    "displayName": "Kid"
+    "displayName": "Kid",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -59,6 +60,36 @@
       },
       "type": "string",
       "default": "Male"
+    },
+    "myMilestones": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::milestone.milestone",
+      "mappedBy": "kid"
+    },
+    "myBadges": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::badge.badge",
+      "mappedBy": "kid"
+    },
+    "myParent": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "myKids"
+    },
+    "myActivities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::activity.activity",
+      "mappedBy": "kid"
+    },
+    "myRescheduledActivities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::rescheduled-event.rescheduled-event",
+      "mappedBy": "myKid"
     }
   }
 }

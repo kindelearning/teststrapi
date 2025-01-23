@@ -4,7 +4,8 @@
   "info": {
     "singularName": "activity",
     "pluralName": "activities",
-    "displayName": "Activity"
+    "displayName": "Activity",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -71,14 +72,15 @@
       "default": "Confidence & Independence"
     },
     "Gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ],
-      "type": "media",
-      "multiple": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -114,14 +116,15 @@
       "default": "Sensory Development"
     },
     "Resources": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ],
-      "type": "media",
-      "multiple": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -153,6 +156,24 @@
         }
       },
       "type": "blocks"
+    },
+    "kid": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::kid.kid",
+      "inversedBy": "myActivities"
+    },
+    "relatedUsers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "allActivities"
+    },
+    "rescheduled_event": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::rescheduled-event.rescheduled-event",
+      "mappedBy": "myActivity"
     }
   }
 }

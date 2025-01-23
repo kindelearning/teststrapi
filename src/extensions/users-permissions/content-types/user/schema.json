@@ -70,18 +70,64 @@
       "default": false
     },
     "profilepic": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "Name": {
       "type": "string",
       "default": "Kid Name"
+    },
+    "allMilestones": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::milestone.milestone",
+      "mappedBy": "users"
+    },
+    "myPaymentMethods": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::payment-method.payment-method",
+      "mappedBy": "myUsers"
+    },
+    "myKids": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::kid.kid",
+      "mappedBy": "myParent"
+    },
+    "myPartner": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "iAmPartnerOf"
+    },
+    "iAmPartnerOf": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "myPartner"
+    },
+    "SubscriptionLevel": {
+      "type": "enumeration",
+      "enum": [
+        "Family",
+        "Family Plus",
+        "Professional"
+      ],
+      "default": "Family"
+    },
+    "allActivities": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::activity.activity",
+      "inversedBy": "relatedUsers"
     }
   }
 }
