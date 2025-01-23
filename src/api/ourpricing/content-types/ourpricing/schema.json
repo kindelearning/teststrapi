@@ -36,7 +36,7 @@
     },
     "MonthlyPlans": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -46,7 +46,7 @@
     },
     "AnnualPlans": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "pluginOptions": {
         "i18n": {
           "localized": true

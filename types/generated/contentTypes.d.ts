@@ -1786,7 +1786,7 @@ export interface ApiOurpricingOurpricing extends Struct.SingleTypeSchema {
         };
       }> &
       Schema.Attribute.DefaultTo<'additionalField'>;
-    AnnualPlans: Schema.Attribute.Component<'global.pricing-entry', false> &
+    AnnualPlans: Schema.Attribute.Component<'global.pricing-entry', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1807,7 +1807,7 @@ export interface ApiOurpricingOurpricing extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::ourpricing.ourpricing'
     >;
-    MonthlyPlans: Schema.Attribute.Component<'global.pricing-entry', false> &
+    MonthlyPlans: Schema.Attribute.Component<'global.pricing-entry', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
