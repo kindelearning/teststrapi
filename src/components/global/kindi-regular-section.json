@@ -1,7 +1,8 @@
 {
   "collectionName": "components_global_kindi_regular_sections",
   "info": {
-    "displayName": "Kindi Regular Section"
+    "displayName": "Kindi Regular Section",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -18,14 +19,15 @@
       "default": "featuredText"
     },
     "Media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "bgcolor": {
       "type": "string",
@@ -34,6 +36,10 @@
     "buttonColor": {
       "type": "string",
       "default": "000000"
+    },
+    "additionalField": {
+      "type": "richtext",
+      "default": "additionalField"
     }
   }
 }

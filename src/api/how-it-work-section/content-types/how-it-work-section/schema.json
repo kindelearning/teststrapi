@@ -43,6 +43,15 @@
         }
       },
       "component": "global.basic-kindi-section"
+    },
+    "additionalField": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext",
+      "default": "additionalField"
     }
   }
 }

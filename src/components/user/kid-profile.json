@@ -40,6 +40,10 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::badge.badge"
+    },
+    "additionalField": {
+      "type": "richtext",
+      "default": "additionalField"
     }
   }
 }

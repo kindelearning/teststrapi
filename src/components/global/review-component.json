@@ -1,7 +1,8 @@
 {
   "collectionName": "components_global_review_components",
   "info": {
-    "displayName": "Review Component"
+    "displayName": "Review Component",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -20,6 +21,10 @@
     "bgcolor": {
       "type": "string",
       "default": "#00946c"
+    },
+    "additionalField": {
+      "type": "richtext",
+      "default": "additionalField"
     }
   }
 }

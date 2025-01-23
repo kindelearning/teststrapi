@@ -59,6 +59,15 @@
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
       "inversedBy": "myPaymentMethods"
+    },
+    "additionalField": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext",
+      "default": "additionalField"
     }
   }
 }

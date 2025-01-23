@@ -1,7 +1,8 @@
 {
   "collectionName": "components_global_toggle_cards",
   "info": {
-    "displayName": "ToggleCard"
+    "displayName": "ToggleCard",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -10,14 +11,15 @@
       "default": "Toggle Card Title"
     },
     "Icon": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "Body": {
       "type": "richtext",
@@ -30,6 +32,10 @@
     "bgcolor": {
       "type": "string",
       "default": "d93636"
+    },
+    "additionalField": {
+      "type": "richtext",
+      "default": "additionalField"
     }
   }
 }

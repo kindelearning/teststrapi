@@ -27,7 +27,7 @@
     },
     "Thumbnail": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "allowedTypes": [
         "images",
@@ -79,6 +79,15 @@
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
       "inversedBy": "allMilestones"
+    },
+    "additionalField": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext",
+      "default": "additionalField"
     }
   }
 }

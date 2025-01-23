@@ -33,6 +33,10 @@
       "type": "component",
       "repeatable": true,
       "component": "global.pricing-component"
+    },
+    "additionalField": {
+      "type": "richtext",
+      "default": "additionalField"
     }
   }
 }

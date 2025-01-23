@@ -4,7 +4,8 @@
   "info": {
     "singularName": "early-learning-expert",
     "pluralName": "early-learning-experts",
-    "displayName": "EarlyLearningExpert"
+    "displayName": "EarlyLearningExpert",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true

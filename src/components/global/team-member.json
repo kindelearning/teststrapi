@@ -1,7 +1,8 @@
 {
   "collectionName": "components_global_team_members",
   "info": {
-    "displayName": "Team Member"
+    "displayName": "Team Member",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -18,14 +19,19 @@
       "default": "Educational play activities, ensuring children learn and develop consistently."
     },
     "MemberPic": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "additionalField": {
+      "type": "richtext",
+      "default": "additionalField"
     }
   }
 }

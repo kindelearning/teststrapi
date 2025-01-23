@@ -4,7 +4,8 @@
   "info": {
     "singularName": "our-theme",
     "pluralName": "our-themes",
-    "displayName": "Our Theme"
+    "displayName": "Our Theme",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -34,14 +35,15 @@
       "default": "metaDesc"
     },
     "Thumbnail": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ],
-      "type": "media",
-      "multiple": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -65,6 +67,15 @@
       },
       "type": "datetime",
       "default": "2025-01-15T18:30:00.000Z"
+    },
+    "additionalField": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext",
+      "default": "additionalField"
     }
   }
 }

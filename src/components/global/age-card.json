@@ -29,6 +29,10 @@
     "link": {
       "type": "string",
       "default": "#"
+    },
+    "additionalField": {
+      "type": "richtext",
+      "default": "additionalField"
     }
   }
 }

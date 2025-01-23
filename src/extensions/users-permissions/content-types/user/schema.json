@@ -128,6 +128,10 @@
       "relation": "manyToMany",
       "target": "api::activity.activity",
       "inversedBy": "relatedUsers"
+    },
+    "additionalField": {
+      "type": "richtext",
+      "default": "additionalField"
     }
   }
 }

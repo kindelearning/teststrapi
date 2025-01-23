@@ -90,6 +90,31 @@
       "relation": "oneToMany",
       "target": "api::rescheduled-event.rescheduled-event",
       "mappedBy": "myKid"
+    },
+    "kidDP": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "additionalField": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext",
+      "default": "additionalField"
     }
   }
 }

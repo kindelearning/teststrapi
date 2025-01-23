@@ -399,6 +399,20 @@ export interface ApiActivityActivity extends Struct.CollectionTypeSchema {
         };
       }> &
       Schema.Attribute.DefaultTo<'2025-01-23'>;
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'additionalField'>;
+    category: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'category'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -531,6 +545,13 @@ export interface ApiBadgeBadge extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -583,6 +604,13 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     comments: Schema.Attribute.Relation<'oneToMany', 'api::comment.comment'>;
     Content: Schema.Attribute.RichText &
       Schema.Attribute.SetPluginOptions<{
@@ -609,8 +637,7 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
       }> &
       Schema.Attribute.DefaultTo<1>;
     FeaturedImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
+      'images' | 'files' | 'videos' | 'audios'
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -695,6 +722,7 @@ export interface ApiChilddevelopmentunlockChilddevelopmentunlock
 export interface ApiCommentComment extends Struct.CollectionTypeSchema {
   collectionName: 'comments';
   info: {
+    description: '';
     displayName: 'Comment';
     pluralName: 'comments';
     singularName: 'comment';
@@ -708,6 +736,13 @@ export interface ApiCommentComment extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     blog: Schema.Attribute.Relation<'manyToOne', 'api::blog.blog'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -748,6 +783,13 @@ export interface ApiContactFormContactForm extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -808,6 +850,7 @@ export interface ApiContactFormContactForm extends Struct.CollectionTypeSchema {
 export interface ApiContentContent extends Struct.CollectionTypeSchema {
   collectionName: 'contents';
   info: {
+    description: '';
     displayName: 'Content';
     pluralName: 'contents';
     singularName: 'content';
@@ -821,6 +864,12 @@ export interface ApiContentContent extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     Body: Schema.Attribute.RichText &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -972,6 +1021,7 @@ export interface ApiEarlyLearningExpertEarlyLearningExpert
   extends Struct.SingleTypeSchema {
   collectionName: 'early_learning_experts';
   info: {
+    description: '';
     displayName: 'EarlyLearningExpert';
     pluralName: 'early-learning-experts';
     singularName: 'early-learning-expert';
@@ -1018,6 +1068,8 @@ export interface ApiFaqFaq extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     Answer: Schema.Attribute.RichText & Schema.Attribute.DefaultTo<'Answer'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1037,6 +1089,7 @@ export interface ApiHomepageHeroSectionHomepageHeroSection
   extends Struct.SingleTypeSchema {
   collectionName: 'homepage_hero_sections';
   info: {
+    description: '';
     displayName: 'HomepageHeroSection';
     pluralName: 'homepage-hero-sections';
     singularName: 'homepage-hero-section';
@@ -1050,6 +1103,13 @@ export interface ApiHomepageHeroSectionHomepageHeroSection
     };
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     bgColor: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1102,6 +1162,7 @@ export interface ApiHomepageHeroSectionHomepageHeroSection
 export interface ApiHowItWorkPageHowItWorkPage extends Struct.SingleTypeSchema {
   collectionName: 'how_it_work_pages';
   info: {
+    description: '';
     displayName: 'How It Work Page';
     pluralName: 'how-it-work-pages';
     singularName: 'how-it-work-page';
@@ -1115,6 +1176,13 @@ export interface ApiHowItWorkPageHowItWorkPage extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     AgeGroup: Schema.Attribute.Component<'global.age-group-section', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1206,6 +1274,13 @@ export interface ApiHowItWorkSectionHowItWorkSection
     };
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1296,6 +1371,13 @@ export interface ApiKidKid extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     Age: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1327,6 +1409,12 @@ export interface ApiKidKid extends Struct.CollectionTypeSchema {
         };
       }> &
       Schema.Attribute.DefaultTo<'Male'>;
+    kidDP: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::kid.kid'>;
     myActivities: Schema.Attribute.Relation<
@@ -1363,6 +1451,7 @@ export interface ApiKidKid extends Struct.CollectionTypeSchema {
 export interface ApiLevelLevel extends Struct.CollectionTypeSchema {
   collectionName: 'levels';
   info: {
+    description: '';
     displayName: 'Level';
     pluralName: 'levels';
     singularName: 'level';
@@ -1376,6 +1465,13 @@ export interface ApiLevelLevel extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1419,6 +1515,13 @@ export interface ApiMilestoneMilestone extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     Category: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1451,8 +1554,7 @@ export interface ApiMilestoneMilestone extends Struct.CollectionTypeSchema {
       }> &
       Schema.Attribute.DefaultTo<'SubCategory'>;
     Thumbnail: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
+      'images' | 'files' | 'videos' | 'audios'
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1577,6 +1679,7 @@ export interface ApiOurMissionOurMission extends Struct.SingleTypeSchema {
 export interface ApiOurThemeOurTheme extends Struct.CollectionTypeSchema {
   collectionName: 'our_themes';
   info: {
+    description: '';
     displayName: 'Our Theme';
     pluralName: 'our-themes';
     singularName: 'our-theme';
@@ -1590,6 +1693,13 @@ export interface ApiOurThemeOurTheme extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1659,6 +1769,13 @@ export interface ApiOurpricingOurpricing extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     AnnualPlans: Schema.Attribute.Component<'global.pricing-entry', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1725,6 +1842,13 @@ export interface ApiPaymentMethodPaymentMethod
     };
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1857,6 +1981,7 @@ export interface ApiPrivacypolicyPrivacypolicy extends Struct.SingleTypeSchema {
 export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   collectionName: 'products';
   info: {
+    description: '';
     displayName: 'Product';
     pluralName: 'products';
     singularName: 'product';
@@ -1870,6 +1995,13 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -2094,6 +2226,13 @@ export interface ApiRescheduledEventRescheduledEvent
     };
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -2121,6 +2260,7 @@ export interface ApiRescheduledEventRescheduledEvent
 export interface ApiReviewReview extends Struct.CollectionTypeSchema {
   collectionName: 'reviews';
   info: {
+    description: '';
     displayName: 'Review';
     pluralName: 'reviews';
     singularName: 'review';
@@ -2134,6 +2274,13 @@ export interface ApiReviewReview extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     bgcolor: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -2704,6 +2851,8 @@ export interface PluginUsersPermissionsUser
     draftAndPublish: false;
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     allActivities: Schema.Attribute.Relation<
       'manyToMany',
       'api::activity.activity'

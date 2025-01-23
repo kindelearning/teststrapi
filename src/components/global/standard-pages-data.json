@@ -1,7 +1,8 @@
 {
   "collectionName": "components_global_standard_pages_data",
   "info": {
-    "displayName": "StandardPagesData"
+    "displayName": "StandardPagesData",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -20,6 +21,10 @@
     "Pagecontent": {
       "type": "richtext",
       "default": "Educational play activities, ensuring children learn and develop consistently."
+    },
+    "additionalField": {
+      "type": "richtext",
+      "default": "additionalField"
     }
   }
 }

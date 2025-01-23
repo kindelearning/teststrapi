@@ -8,6 +8,8 @@ export interface GlobalAgeCard extends Struct.ComponentSchema {
     icon: 'book';
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     Body: Schema.Attribute.RichText & Schema.Attribute.DefaultTo<'Body'>;
     Icon: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
@@ -21,9 +23,12 @@ export interface GlobalAgeCard extends Struct.ComponentSchema {
 export interface GlobalAgeGroupSection extends Struct.ComponentSchema {
   collectionName: 'components_global_age_group_sections';
   info: {
+    description: '';
     displayName: 'AgeGroupSection';
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     Body: Schema.Attribute.RichText & Schema.Attribute.DefaultTo<'Body'>;
     Content: Schema.Attribute.Component<'global.age-card', true>;
     featuredText: Schema.Attribute.String &
@@ -35,18 +40,18 @@ export interface GlobalAgeGroupSection extends Struct.ComponentSchema {
 export interface GlobalBasicKindiSection extends Struct.ComponentSchema {
   collectionName: 'components_global_basic_kindi_sections';
   info: {
+    description: '';
     displayName: 'Basic Kindi Section';
     icon: 'bold';
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     BodyDescription: Schema.Attribute.RichText &
       Schema.Attribute.DefaultTo<'Educational play activities, ensuring children learn and develop consistently.'>;
     featuredText: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'featuredText'>;
-    Media: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
+    Media: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String & Schema.Attribute.DefaultTo<'title'>;
   };
 }
@@ -54,9 +59,12 @@ export interface GlobalBasicKindiSection extends Struct.ComponentSchema {
 export interface GlobalFaq extends Struct.ComponentSchema {
   collectionName: 'components_global_faqs';
   info: {
+    description: '';
     displayName: 'FAQ';
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     Answer: Schema.Attribute.RichText &
       Schema.Attribute.DefaultTo<'Educational play activities, ensuring children learn and develop consistently.'>;
     Question: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Question'>;
@@ -66,9 +74,12 @@ export interface GlobalFaq extends Struct.ComponentSchema {
 export interface GlobalKindiRegularSection extends Struct.ComponentSchema {
   collectionName: 'components_global_kindi_regular_sections';
   info: {
+    description: '';
     displayName: 'Kindi Regular Section';
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     bgcolor: Schema.Attribute.String & Schema.Attribute.DefaultTo<'ffffff'>;
     Body: Schema.Attribute.RichText & Schema.Attribute.DefaultTo<'Body'>;
     buttonColor: Schema.Attribute.String & Schema.Attribute.DefaultTo<'000000'>;
@@ -85,9 +96,12 @@ export interface GlobalKindiRegularSection extends Struct.ComponentSchema {
 export interface GlobalPricingComponent extends Struct.ComponentSchema {
   collectionName: 'components_global_pricing_components';
   info: {
+    description: '';
     displayName: 'Pricing Component';
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     HelpText: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Educational play activities, ensuring children learn and develop consistently.'>;
     isIncluded: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
@@ -102,6 +116,8 @@ export interface GlobalPricingEntry extends Struct.ComponentSchema {
     displayName: 'Pricing Entry';
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     Features: Schema.Attribute.Component<'global.pricing-component', true>;
     Price: Schema.Attribute.Decimal & Schema.Attribute.DefaultTo<129.99>;
     PriceBody: Schema.Attribute.RichText &
@@ -118,9 +134,12 @@ export interface GlobalPricingEntry extends Struct.ComponentSchema {
 export interface GlobalReviewComponent extends Struct.ComponentSchema {
   collectionName: 'components_global_review_components';
   info: {
+    description: '';
     displayName: 'Review Component';
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     bgcolor: Schema.Attribute.String & Schema.Attribute.DefaultTo<'#00946c'>;
     body: Schema.Attribute.RichText &
       Schema.Attribute.DefaultTo<'Educational play activities, ensuring children learn and develop consistently.'>;
@@ -133,9 +152,12 @@ export interface GlobalReviewComponent extends Struct.ComponentSchema {
 export interface GlobalStandardPagesData extends Struct.ComponentSchema {
   collectionName: 'components_global_standard_pages_data';
   info: {
+    description: '';
     displayName: 'StandardPagesData';
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     Body: Schema.Attribute.RichText &
       Schema.Attribute.DefaultTo<'Educational play activities, ensuring children learn and develop consistently.'>;
     Lastupdated: Schema.Attribute.Date &
@@ -149,11 +171,14 @@ export interface GlobalStandardPagesData extends Struct.ComponentSchema {
 export interface GlobalTeamMember extends Struct.ComponentSchema {
   collectionName: 'components_global_team_members';
   info: {
+    description: '';
     displayName: 'Team Member';
   };
   attributes: {
     About: Schema.Attribute.RichText &
       Schema.Attribute.DefaultTo<'Educational play activities, ensuring children learn and develop consistently.'>;
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     Degree: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Degree'>;
     MemberPic: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Name: Schema.Attribute.String &
@@ -164,9 +189,12 @@ export interface GlobalTeamMember extends Struct.ComponentSchema {
 export interface GlobalToggleCard extends Struct.ComponentSchema {
   collectionName: 'components_global_toggle_cards';
   info: {
+    description: '';
     displayName: 'ToggleCard';
   };
   attributes: {
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     bgcolor: Schema.Attribute.String & Schema.Attribute.DefaultTo<'d93636'>;
     Body: Schema.Attribute.RichText &
       Schema.Attribute.DefaultTo<'Educational play activities, ensuring children learn and develop consistently.'>;
@@ -188,6 +216,8 @@ export interface UserKidProfile extends Struct.ComponentSchema {
   };
   attributes: {
     activity_completeds: Schema.Attribute.Relation<'oneToMany', 'api::kid.kid'>;
+    additionalField: Schema.Attribute.RichText &
+      Schema.Attribute.DefaultTo<'additionalField'>;
     age: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<12>;
     AttendingNursury: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<true>;
