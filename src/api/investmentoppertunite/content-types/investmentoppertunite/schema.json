@@ -4,7 +4,8 @@
   "info": {
     "singularName": "investmentoppertunite",
     "pluralName": "investmentoppertunites",
-    "displayName": "Investmentoppertunite"
+    "displayName": "Investmentoppertunite",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -23,7 +24,7 @@
           "localized": true
         }
       },
-      "component": "global.basic-kindi-section"
+      "component": "global.standard-pages-data"
     }
   }
 }

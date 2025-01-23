@@ -1329,6 +1329,7 @@ export interface ApiInvestmentoppertuniteInvestmentoppertunite
   extends Struct.SingleTypeSchema {
   collectionName: 'investmentoppertunites';
   info: {
+    description: '';
     displayName: 'Investmentoppertunite';
     pluralName: 'investmentoppertunites';
     singularName: 'investmentoppertunite';
@@ -1342,7 +1343,7 @@ export interface ApiInvestmentoppertuniteInvestmentoppertunite
     };
   };
   attributes: {
-    Content: Schema.Attribute.Component<'global.basic-kindi-section', false> &
+    Content: Schema.Attribute.Component<'global.standard-pages-data', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
