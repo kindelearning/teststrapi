@@ -1,0 +1,48 @@
+{
+  "kind": "singleType",
+  "collectionName": "how_it_work_sections",
+  "info": {
+    "singularName": "how-it-work-section",
+    "pluralName": "how-it-work-sections",
+    "displayName": "How it work Section",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "MainTitle": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "default": "MainTitle"
+    },
+    "MainBody": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext",
+      "default": "Educational play activities, ensuring children learn and develop consistently."
+    },
+    "HIWSection": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "global.basic-kindi-section"
+    }
+  }
+}

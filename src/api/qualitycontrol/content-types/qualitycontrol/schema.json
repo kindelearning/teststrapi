@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "qualitycontrols",
+  "info": {
+    "singularName": "qualitycontrol",
+    "pluralName": "qualitycontrols",
+    "displayName": "Qualitycontrol"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Content": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "global.standard-pages-data"
+    }
+  }
+}

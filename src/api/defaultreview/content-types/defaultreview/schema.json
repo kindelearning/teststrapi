@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "defaultreviews",
+  "info": {
+    "singularName": "defaultreview",
+    "pluralName": "defaultreviews",
+    "displayName": "Defaultreview"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Content": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "global.basic-kindi-section"
+    }
+  }
+}

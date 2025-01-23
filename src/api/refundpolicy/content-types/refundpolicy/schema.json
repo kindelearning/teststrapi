@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "refundpolicies",
+  "info": {
+    "singularName": "refundpolicy",
+    "pluralName": "refundpolicies",
+    "displayName": "Refundpolicy"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Content": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "global.standard-pages-data"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "investmentoppertunites",
+  "info": {
+    "singularName": "investmentoppertunite",
+    "pluralName": "investmentoppertunites",
+    "displayName": "Investmentoppertunite"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Content": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "global.basic-kindi-section"
+    }
+  }
+}

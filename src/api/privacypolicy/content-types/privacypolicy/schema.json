@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "privacypolicies",
+  "info": {
+    "singularName": "privacypolicy",
+    "pluralName": "privacypolicies",
+    "displayName": "Privacypolicy"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Content": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "global.standard-pages-data"
+    }
+  }
+}

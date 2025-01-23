@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "monthlythemes",
+  "info": {
+    "singularName": "monthlytheme",
+    "pluralName": "monthlythemes",
+    "displayName": "Monthlytheme"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Content": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "global.basic-kindi-section"
+    }
+  }
+}
